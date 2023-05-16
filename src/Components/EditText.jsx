@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Provider, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {changeoldName} from "../Redux/counter";
 
 export const EditText = () => {
@@ -8,12 +8,13 @@ export const EditText = () => {
  const dispatch = useDispatch();
 
  const changetext = ()=>{
- dispatch(changeoldName(name));
+  dispatch(changeoldName(name));
+
  }
 
   return (
 <main>
-      <h1>My name is <span>{text}</span></h1>
+      <h1>Your name is <span>{text}</span></h1>
       <div><input className='input_field' onChange={(e)=> setName(e.target.value)} placeholder='enter your name'/>
       <button className='change_btn' onClick={changetext}>Change name</button></div>  
     </main>
