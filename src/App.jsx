@@ -1,22 +1,22 @@
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { increment, decrement, zerovalue, incrementByAmount } from './Redux/counter';
-
+import { CounterPage } from './Components/CounterPage';
+import { Home } from './Components/Home';
+import { EditText } from './Components/EditText';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
-
-  const {count} = useSelector((state) => state.count)
-  const dispatch = useDispatch();
 
   return (
     <>
-  <div className='App'>
- <h1>The count is : <span>{count}</span></h1>
- <button onClick={()=> dispatch(increment())}>Increment</button>
- <button onClick={()=> dispatch(decrement())}>Decrement</button>
- <button onClick={()=> dispatch(zerovalue())}>Return to zero</button>
- <button onClick={()=> dispatch(incrementByAmount(44))}>increment by 44</button>
-  </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/EditText' element={<EditText/>}/>
+      <Route path='/CounterPage' element={<CounterPage/>}/>
+    </Routes>
+    </BrowserRouter>
     </>
+
+
   )
 }
 
