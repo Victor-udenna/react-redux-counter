@@ -11,8 +11,8 @@ export const Home = () => {
         <Link to="/EditText">
         <div className='page_link'>EditText</div>
         </Link>
-        <Link>
-        <div className='page_link'>...</div>
+        <Link to="/Counter2">
+        <div className='page_link'>Counter 2</div>
         </Link>
     </main>
   )

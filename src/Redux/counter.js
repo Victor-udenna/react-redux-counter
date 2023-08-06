@@ -8,12 +8,8 @@ export const counterSlice = createSlice({
       name: "enter"
     }
   },
-  reducers: {
+  reducers: { 
     increment: state => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable stoate based off those changes
       state.count.number += 1
     },
     decrement: state => {
